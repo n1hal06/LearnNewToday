@@ -1,0 +1,303 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: "Coiny";
+    color: #f3f3f3;
+    text-align: center;
+}
+
+header{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.message{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 24px;
+
+}
+
+#root{
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 80vh;
+
+}
+section{
+    overflow:scroll;
+    padding-bottom: 40px;
+}
+
+.logo{
+    display: flex;
+    align-items:center;
+    gap: 16px;
+}
+
+.logo img{
+    width: 68px;
+    height: 68px;
+}
+
+form{
+    background-color: #454140;
+    margin-bottom: 40px;
+    padding: 16px 24px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+@media(max-width:1000px){
+    body{
+        /*padding:32px 48px;*/
+    }
+
+    form{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    form input,form select{
+        width: auto;
+    }
+}
+
+
+
+form input,form select{
+    width: 220px;
+    background-color: #78716c;
+    border: none;
+    border-radius: 100px;
+    color: inherit;
+    font-style: inherit;
+    padding: 16px;
+    font-size: 18px;
+}
+
+form input::placeholder{
+    color: #a8a29e;
+}
+
+form input:first-child{
+    flex-grow: 1;
+}
+
+form span{
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 18px;
+}
+
+
+form select:hover{
+    background-color: #1a1b1a;
+    cursor: pointer;
+}
+
+
+.num{
+    font-family: "Sono";
+}
+
+
+main{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 48px;
+    height: calc(100vh  - 48px - 68px - 60px - 40px);
+    
+
+}
+
+
+@media(max-width:900px){
+    main{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+body{
+    background-color: #1a1b1a;
+    color:#f3f3f3;
+    padding: 48px 64px 0px;
+}
+
+
+.disputed{
+    color: #ef4444;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+
+.tag{
+    font-family: "Coiny";
+    font-size: 12px;
+    color: #f3f3f3;
+    padding-top:3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100px;
+}
+
+
+.fact{
+    font-size: 18px;
+    line-height: 1.4;
+    font-family: "Sono";
+    background-color: #454140;
+    margin-bottom: 18px;
+    padding: 16px 24px;
+    letter-spacing: -1px;
+    border-radius: 16px;
+
+
+    display: flex;
+    align-items: center;
+}
+
+
+@media (max-width:1200px){
+    .fact{
+    flex-direction: column;
+    align-items: flex-end;
+    gap:12px;
+    }
+}
+
+
+
+.emoji{
+    margin-left: auto;
+    flex-shrink: 0;
+
+    display: flex;
+    gap: 8px;
+}
+
+
+.source:link,.source:visited{
+    color: #a8a29e;
+    text-decoration: none;
+    margin-left: 12px;
+    transition: 0.3s;
+}
+
+
+.btn{
+    border: none;
+    font-family: "Coiny";
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 16px 0 13px;
+    background-image: linear-gradient(135deg,#3b82f6,#ef4444,#16a34a,#eab308);
+    color: inherit;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-large{
+    font-size:20px;
+    padding: 20px 32px 17px;
+}
+
+.btn-all-categories{
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.btn-categories{
+    width: 100%;
+    background-image: none;
+
+}
+
+.btn:hover{
+    transform: scale(110%) rotate(-2deg);
+}
+
+.category{
+    margin-bottom: 16px;
+}
+
+.source:hover,.source:active{
+    color:#3b82f6;
+}
+
+
+span{
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+ul{
+    list-style:none;
+}
+
+.emoji button{
+    border: none;
+    background-color: #78716c;
+    font-size: 18px;
+    padding: 6px 12px;
+    border-radius: 100px;
+    color: inherit;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.emoji button:hover{
+    background-color: #1a1b1a;
+}
+.emoji button:disabled{
+    background-color: #1a1b1a;
+}
+
+.hidden{
+    display: none  !important;
+}
+
+@media (max-width: 900px) {
+    .main {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
+  }
+   
+  @media (max-width: 600px) {
+    #root {
+      padding: 24px;
+    }
+   
+    .header {
+      flex-direction: column;
+      gap: 16px;
+    }
+   
+    .fact-form {
+      padding: 16px;
+    }
+   
+    .fact {
+      padding: 12px 16px;
+    }
+  }
+
